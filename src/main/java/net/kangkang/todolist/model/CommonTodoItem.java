@@ -1,11 +1,15 @@
 package net.kangkang.todolist.model;
 
+import java.util.UUID;
+
 public class CommonTodoItem implements ITodoItem{
     private String content;
+    private final String id;
     private boolean done;
 
     public CommonTodoItem(String content) {
         this.content = content;
+        this.id = UUID.randomUUID().toString();
         this.done = false;
     }
 
@@ -17,6 +21,11 @@ public class CommonTodoItem implements ITodoItem{
     @Override
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String getId(){
+        return id;
     }
 
     @Override
@@ -33,5 +42,4 @@ public class CommonTodoItem implements ITodoItem{
     public void undone() {
         done = false;
     }
-    // TODO: 2023/2/8 implement common todo item
 }

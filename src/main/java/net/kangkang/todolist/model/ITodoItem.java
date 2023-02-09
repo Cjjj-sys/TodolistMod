@@ -7,6 +7,7 @@ public interface ITodoItem {
 
     String getContent();
     void setContent(String content);
+    String getId();
     boolean isDone();
     void done();
     void undone();
