@@ -4,8 +4,13 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.kangkang.todolist.config.TodolistConfig;
+import net.kangkang.todolist.model.ITodoItem;
+import net.kangkang.todolist.model.ITodoList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TodolistMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.

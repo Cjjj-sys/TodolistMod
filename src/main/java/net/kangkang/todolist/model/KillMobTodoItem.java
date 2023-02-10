@@ -1,5 +1,6 @@
 package net.kangkang.todolist.model;
 
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.MobEntity;
 
 import java.util.UUID;
@@ -7,13 +8,13 @@ import java.util.UUID;
 public class KillMobTodoItem implements ITodoItem{
     private String content;
     private final String id;
-    private final MobEntity mob;
+    private final EntityType mob;
     private final long total;
     private long progress;
     private boolean preserveProgress;
     private boolean done;
 
-    public KillMobTodoItem(String content, MobEntity mob, long total, boolean preserveProgress){
+    public KillMobTodoItem(String content, EntityType mob, long total, boolean preserveProgress){
         this.mob = mob;
         this.total = total;
         this.progress = 0;
@@ -45,7 +46,7 @@ public class KillMobTodoItem implements ITodoItem{
         return progress;
     }
 
-    public MobEntity getMob() {
+    public EntityType getMob() {
         return mob;
     }
 
